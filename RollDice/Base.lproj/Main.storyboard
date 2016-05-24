@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Roll View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RollViewController" customModule="RollDice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mI-Cz-usn">
+                                <rect key="frame" x="248" y="280" width="104" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="0ec-bJ-k2Q"/>
+                                    <constraint firstAttribute="height" constant="40" id="b32-8K-pfP"/>
+                                </constraints>
+                                <state key="normal" title="Roll The Dice"/>
+                                <connections>
+                                    <action selector="rollTheDice" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vsa-T2-SMX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0mI-Cz-usn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X5Y-8P-Yev"/>
+                            <constraint firstItem="0mI-Cz-usn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cyQ-Sm-VSm"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29" y="131"/>
+        </scene>
+        <!--Dice View Controller-->
+        <scene sceneID="XkP-mV-8S5">
+            <objects>
+                <viewController storyboardIdentifier="DiceViewController" id="wQl-jW-z4P" customClass="DiceViewController" customModule="RollDice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cXx-p8-cp7"/>
+                        <viewControllerLayoutGuide type="bottom" id="t9I-zM-zuE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wGn-fD-ooI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="die3" translatesAutoresizingMaskIntoConstraints="NO" id="i0N-nj-JO4" userLabel="SecondDie">
+                                <rect key="frame" x="250" y="300" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="IAc-VF-Xqf"/>
+                                    <constraint firstAttribute="width" constant="100" id="Vna-vy-c2K"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="die1" translatesAutoresizingMaskIntoConstraints="NO" id="F3x-hk-zhk" userLabel="FirstDie">
+                                <rect key="frame" x="250" y="110" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="5So-ae-jhg"/>
+                                    <constraint firstAttribute="width" constant="100" id="b4H-aC-Xgm"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3T-RN-Ozt">
+                                <rect key="frame" x="250" y="500" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.11317626386880875" green="0.97399932146072388" blue="0.042479567229747772" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="mzG-vr-kk2"/>
+                                    <constraint firstAttribute="height" constant="30" id="x68-9O-KSN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="dismiss" destination="wQl-jW-z4P" eventType="touchUpInside" id="ocq-Tr-aik"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.67141426282051286" green="0.67141426282051286" blue="0.67141426282051286" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="i0N-nj-JO4" firstAttribute="centerX" secondItem="wGn-fD-ooI" secondAttribute="centerX" id="1sZ-R6-LuA"/>
+                            <constraint firstItem="J3T-RN-Ozt" firstAttribute="top" secondItem="i0N-nj-JO4" secondAttribute="bottom" constant="100" id="BmY-8k-WbY"/>
+                            <constraint firstItem="i0N-nj-JO4" firstAttribute="top" secondItem="F3x-hk-zhk" secondAttribute="bottom" constant="90" id="MhD-kp-rNy"/>
+                            <constraint firstItem="F3x-hk-zhk" firstAttribute="centerX" secondItem="wGn-fD-ooI" secondAttribute="centerX" id="VGz-CA-bzt"/>
+                            <constraint firstItem="F3x-hk-zhk" firstAttribute="top" secondItem="cXx-p8-cp7" secondAttribute="bottom" constant="90" id="cSN-Tg-i2G"/>
+                            <constraint firstItem="J3T-RN-Ozt" firstAttribute="centerX" secondItem="wGn-fD-ooI" secondAttribute="centerX" id="x11-eJ-If2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstDie" destination="F3x-hk-zhk" id="w00-mR-G9e"/>
+                        <outlet property="secondDie" destination="i0N-nj-JO4" id="qgo-gP-Uxz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X9a-ku-g83" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="813" y="131"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="die1" width="100" height="100"/>
+        <image name="die3" width="100" height="100"/>
+    </resources>
+</document>
